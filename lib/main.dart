@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:quizzler/start_page.dart';
+
 import 'questions.dart';
 
-void main() => runApp(Quizzer());
+void main() => runApp(StartPage());
 
 class Quizzer extends StatelessWidget {
   @override
