@@ -11,35 +11,23 @@ class _QuizPageState extends State<QuizPage> {
   List<Widget> scoreKeeper = [];
 
   QuizAccount quizbank = QuizAccount();
-
-  /*void check(int ANS) {
-    int correctAnswers = quizbank.getQuestionAnswer();
-    setState(() {
-      if (ANS == correctAnswers) {
-        quizbank.next();
-        scoreKeeper.add(
-          Icon(
-            Icons.check,
-            color: Colors.green,
-          ),
-        );
-      } else {
-        quizbank.next();
-        scoreKeeper.add(Icon(
-          Icons.close,
-          color: Colors.red,
-        ));
-      }
-    });
-  }*/
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
       appBar: AppBar(
-        leading: Icon(Icons.all_inclusive),
-        title: Text('QUize\'s App'),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/about');
+            },
+            icon: Icon(
+              Icons.info,
+              color: Colors.white,
+            ),
+          )
+        ],
+        title: Text('اختبار الغباء'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -127,6 +115,14 @@ class _QuizPageState extends State<QuizPage> {
               ],
             ),
           ),
+          Container(
+            width: double.infinity,
+            height: 50,
+            color: Colors.blue[100],
+            child: Center(
+              child: Text('ADS'),
+            ),
+          )
         ],
       ),
     );
