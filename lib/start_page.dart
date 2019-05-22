@@ -8,31 +8,49 @@ class StartPage extends StatefulWidget {
 class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      child: Column(
-        children: <Widget>[
-          Text(
-            'sadasd',
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-            textDirection: TextDirection.rtl,
-          ),
-          Text('asdasd',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-              textDirection: TextDirection.rtl),
-          SizedBox(
-            height: 50,
-          ),
-          FlatButton(
-            onPressed: () {},
-            color: Colors.blue,
-            child: Text('asdasd',
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.all_inclusive),
+        title: Text('QUize\'s App'),
+      ),
+      backgroundColor: Colors.grey.shade900,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Text(
+              'مرحبًا بك في اختبار الغباء',
+              style: TextStyle(
+                  fontSize: 32,
+                  color: Colors.grey[100],
+                  fontWeight: FontWeight.bold),
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+            ),
+            Text('هل انت مستعد لمعرفة كم انت غبي؟',
                 style: TextStyle(
-                  color: Colors.blue,
-                ),
+                    fontSize: 28,
+                    color: Colors.grey[100],
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl),
-          )
-        ],
+            SizedBox(
+              height: 50,
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/quiz', (s) => s == '/');
+              },
+              color: Colors.black12,
+              child: Text('مستعد!!',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  textDirection: TextDirection.rtl),
+            )
+          ],
+        ),
       ),
     );
   }
