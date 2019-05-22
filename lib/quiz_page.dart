@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizzler/questions.dart';
+
 import 'quizAccount.dart';
 
 class QuizPage extends StatefulWidget {
@@ -46,7 +46,7 @@ class _QuizPageState extends State<QuizPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
-            flex: 5,
+            flex: 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
@@ -62,46 +62,66 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(15.0),
-              child: FlatButton(
-                textColor: Colors.white,
-                color: Colors.green,
-                child: Text(
-                  'True',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
+            child: ListView(
+              children: <Widget>[
+                FlatButton(
+                  color: Colors.red,
+                  child: Text(
+                    'False',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
                   ),
+                  onPressed: () {
+                    //The user picked false.
+                    check(false);
+                  },
                 ),
-                onPressed: () {
-                  //The user picked true.
-                  check(true);
-                },
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(15.0),
-              child: FlatButton(
-                color: Colors.red,
-                child: Text(
-                  'False',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.white,
+                FlatButton(
+                  color: Colors.red,
+                  child: Text(
+                    'False',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
                   ),
+                  onPressed: () {
+                    //The user picked false.
+                    check(false);
+                  },
                 ),
-                onPressed: () {
-                  //The user picked false.
-                  check(false);
-                },
-              ),
+                FlatButton(
+                  color: Colors.red,
+                  child: Text(
+                    'False',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    //The user picked false.
+                    check(false);
+                  },
+                ),
+                FlatButton(
+                  color: Colors.red,
+                  child: Text(
+                    'False',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    //The user picked false.
+                    check(false);
+                  },
+                )
+              ],
             ),
-          ),
-          Row(
-            children: scoreKeeper,
           ),
         ],
       ),
