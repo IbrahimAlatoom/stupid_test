@@ -1,13 +1,16 @@
-import 'questions.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:quizzler/questions.dart';
+
+import 'choice.dart';
 
 class QuizAccount {
   int _QuestionCount = 0;
   List<Questions> _questionBank = [
-    Questions('1.لماذا نزلت التطبيق؟', 'لمعرفة كمية غبائك',
-        'لمعرفة إذا كنت غبيًا أم لا', 'لأنك تشعر بالغباء.', 'لأنك غبي.', 0),
-    Questions('2.إذا كان هناك 6 تفاحات وأخذت 4. كم تفاحة سيظل معك؟', '5', '4',
-        '3', '2', 1)
+    Questions(
+        questionText: 'how are you',
+        choice_1: Choice(data: 'wow', value: 1),
+        choice_2: Choice(data: 'wow', value: 2),
+        choice_3: Choice(data: 'wow', value: 2),
+        choice_4: Choice(data: 'wow', value: 2))
   ];
 
   void next() {
@@ -21,22 +24,18 @@ class QuizAccount {
   }
 
   String getQuestionAns1() {
-    return _questionBank[_QuestionCount].questionAnswers1;
+    return _questionBank[_QuestionCount].choice_1.data;
   }
 
   String getQuestionAns2() {
-    return _questionBank[_QuestionCount].questionAnswers2;
+    return _questionBank[_QuestionCount].choice_2.data;
   }
 
   String getQuestionAns3() {
-    return _questionBank[_QuestionCount].questionAnswers3;
+    return _questionBank[_QuestionCount].choice_3.data;
   }
 
   String getQuestionAns4() {
-    return _questionBank[_QuestionCount].questionAnswers4;
-  }
-
-  int getQuestionAnswer() {
-    return _questionBank[_QuestionCount].rightAns;
+    return _questionBank[_QuestionCount].choice_4.data;
   }
 }

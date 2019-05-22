@@ -1,17 +1,17 @@
+import 'choice.dart';
+
 class Questions {
   String questionText;
-  String questionAnswers1;
-  String questionAnswers2;
-  String questionAnswers3;
-  String questionAnswers4;
-  int rightAns;
+
+  Choice choice_1;
+  Choice choice_2;
+  Choice choice_3;
+  Choice choice_4;
+
   Questions(
-      String q, String a1, String a2, String a3, String a4, int RightANS) {
-    questionText = q;
-    questionAnswers1 = a1;
-    questionAnswers2 = a2;
-    questionAnswers3 = a3;
-    questionAnswers4 = a4;
-    RightANS = rightAns;
-  }
+      {this.questionText,
+      this.choice_1,
+      this.choice_2,
+      this.choice_3,
+      this.choice_4});
 }
