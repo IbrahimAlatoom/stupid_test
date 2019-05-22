@@ -12,8 +12,8 @@ class _QuizPageState extends State<QuizPage> {
 
   QuizAccount quizbank = QuizAccount();
 
-  void check(bool ANS) {
-    bool correctAnswers = quizbank.getQuestionAnswer();
+  /*void check(int ANS) {
+    int correctAnswers = quizbank.getQuestionAnswer();
     setState(() {
       if (ANS == correctAnswers) {
         quizbank.next();
@@ -31,7 +31,7 @@ class _QuizPageState extends State<QuizPage> {
         ));
       }
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -67,57 +67,61 @@ class _QuizPageState extends State<QuizPage> {
                 FlatButton(
                   color: Colors.red,
                   child: Text(
-                    'False',
+                    quizbank.getQuestionAns1(),
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,
                     ),
                   ),
                   onPressed: () {
-                    //The user picked false.
-                    check(false);
+                    setState(() {
+                      quizbank.next();
+                    });
                   },
                 ),
                 FlatButton(
                   color: Colors.red,
                   child: Text(
-                    'False',
+                    quizbank.getQuestionAns2(),
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,
                     ),
                   ),
                   onPressed: () {
-                    //The user picked false.
-                    check(false);
+                    setState(() {
+                      quizbank.next();
+                    });
                   },
                 ),
                 FlatButton(
                   color: Colors.red,
                   child: Text(
-                    'False',
+                    quizbank.getQuestionAns3(),
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,
                     ),
                   ),
                   onPressed: () {
-                    //The user picked false.
-                    check(false);
+                    setState(() {
+                      quizbank.next();
+                    });
                   },
                 ),
                 FlatButton(
                   color: Colors.red,
                   child: Text(
-                    'False',
+                    quizbank.getQuestionAns4(),
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,
                     ),
                   ),
                   onPressed: () {
-                    //The user picked false.
-                    check(false);
+                    setState(() {
+                      quizbank.next();
+                    });
                   },
                 )
               ],

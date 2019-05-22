@@ -4,10 +4,10 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 class QuizAccount {
   int _QuestionCount = 0;
   List<Questions> _questionBank = [
-    Questions('You can lead a cow down stairs but not up stairs.', false),
-    Questions(
-        'Approximately one quarter of human bones are in the feet.', true),
-    Questions('A slug\'s blood is green.', true)
+    Questions('1.لماذا نزلت التطبيق؟', 'لمعرفة كمية غبائك',
+        'لمعرفة إذا كنت غبيًا أم لا', 'لأنك تشعر بالغباء.', 'لأنك غبي.', 0),
+    Questions('2.إذا كان هناك 6 تفاحات وأخذت 4. كم تفاحة سيظل معك؟', '5', '4',
+        '3', '2', 1)
   ];
 
   void next() {
@@ -20,7 +20,23 @@ class QuizAccount {
     return _questionBank[_QuestionCount].questionText;
   }
 
-  bool getQuestionAnswer() {
-    return _questionBank[_QuestionCount].questionAnswers;
+  String getQuestionAns1() {
+    return _questionBank[_QuestionCount].questionAnswers1;
+  }
+
+  String getQuestionAns2() {
+    return _questionBank[_QuestionCount].questionAnswers2;
+  }
+
+  String getQuestionAns3() {
+    return _questionBank[_QuestionCount].questionAnswers3;
+  }
+
+  String getQuestionAns4() {
+    return _questionBank[_QuestionCount].questionAnswers4;
+  }
+
+  int getQuestionAnswer() {
+    return _questionBank[_QuestionCount].rightAns;
   }
 }
