@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+enum ThemeType { Light, Dark }
 
-const flatButtonTextStyle = TextStyle(fontSize: 20.0, color: Colors.white);
+ThemeType currentTheme = ThemeType.Light;
+
+const flatButtonTextStyle = TextStyle(fontSize: 24.0, color: Colors.white);
 const privacyPolicyEnglish =
     "Privacy Policy of Lemon Lab\nLemon Lab provides many services including this app."
     "\nThis page is used to inform Lemon Lab offers visitors regarding our policies with the collection use، and disclosure of Personal Information"
@@ -14,19 +17,24 @@ const privacyPolicyEnglish =
     "Information Collection and Use\n"
     "For a better experience while using our Service، we may require you to provide us with certain personally"
     "identifiable information، including but not limited to your name، phone number، and postal address. The"
-    "information that we collect will be used to contact or identify you.\n"""
+    "information that we collect will be used to contact or identify you.\n"
+    ""
     " Log Data\n  We want to inform you that whenever you visit our Service، we collect information that your browser sends to us"
     "that is called Log Data. This Log Data may include information such as your computer’s Internet Protocol address، "
     "browser version، pages of our Service that you visit، the time and date of your visit، the time spent"
-    " on those pages، and other statistics.\n"""
+    " on those pages، and other statistics.\n"
+    ""
     "Cookies are files with small amount of data that is commonly used an anonymous unique identifier. "
     "These are sent to your browser from the website that you visit and are stored on your computer’s hard drive.\n"
     "Our apps uses these cookies to collection information and to improve our Service. You have the option to either"
     " accept or refuse these cookies، and know when a cookie is being sent to your computer. If you choose to refuse our cookies،"
-    " you may not be able to use some portions of our Service.\n""Service Providers\n"""
+    " you may not be able to use some portions of our Service.\n"
+    "Service Providers\n"
+    ""
     " We may employ third-party companies and individuals due to the following reasons:\n "
     "To facilitate our Service;\n To provide the Service on our behalf;\n"
-    "To perform Service -related services; \n  or To assist us in analyzing how our Service is used.\n"""
+    "To perform Service -related services; \n  or To assist us in analyzing how our Service is used.\n"
+    ""
     "We want to inform our Service users that these third parties have access to your Personal Information."
     " The reason is to perform the tasks assigned to them on our behalf. However، they are obligated not to disclose or "
     "use the information for any other purpose.\n       Security\n"
@@ -37,15 +45,19 @@ const privacyPolicyEnglish =
     "Our Service may contain links to other sites. If you click on a third-party link، you will be directed to that "
     "site. Note that these external sites are not operated by us. Therefore، we strongly advise you to review the Privacy Policy of these websites."
     " We have no control over، and assume no responsibility for the content، privacy policies، or practices of any third-party sites or services."
-    "Children’s Privacy\n""Our Services do not address anyone under the age of 6. We do not knowingly collect personal identifiable"
+    "Children’s Privacy\n"
+    "Our Services do not address anyone under the age of 6. We do not knowingly collect personal identifiable"
     "information from children under 6. In the case we discover that a child under 6 has provided us with personal information،"
     " we immediately delete this from our servers. If you are a parent or guardian and you are aware that "
-    "your child has provided us with personal information، please contact us so that we will be able to do necessary actions.\n"""
+    "your child has provided us with personal information، please contact us so that we will be able to do necessary actions.\n"
+    ""
     "Changes to This Privacy Policy\n "
     "We may update our Privacy Policy from time to time. Thus، we advise you to review this page periodically for any "
     "changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are "
-    "effective immediately، after they are posted on this page.\n       Contact Us\n"""
+    "effective immediately، after they are posted on this page.\n       Contact Us\n"
+    ""
     "If you have any questions or suggestions about our Privacy Policy، do not hesitate to contact us at zaka7024@gmail.com.\n";
-const aboutLemonLabAr = "مختبر الليمون فريق يسعى لنشر تطبيقات تساعد الناس وتسهل حياتهم. \n"
+const aboutLemonLabAr =
+    "مختبر الليمون فريق يسعى لنشر تطبيقات تساعد الناس وتسهل حياتهم. \n"
     "نحاول أن نستخدم أحدث الخدمات وأفضل الطرق لإيصال تطبيقاتنا إلى مستوىً منافس. "
     "تطبيقاتنا ترفيهية في غالبها، لكن قد نطوّر بعض التطبيقات التعليمية بين حين وآخر.";

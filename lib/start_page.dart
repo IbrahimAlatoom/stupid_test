@@ -6,31 +6,30 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
+  void notifiyParent() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('مرحبًا بك'),
       ),
-      backgroundColor: Colors.grey.shade900,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Text(
               'مرحبًا بك في اختبار الغباء',
-              style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.grey[100],
-                  fontWeight: FontWeight.bold),
+              style:
+                  Theme.of(context).textTheme.display1.copyWith(fontSize: 32),
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
             ),
             Text('هل انت مستعد لمعرفة كم انت غبي؟',
-                style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.grey[100],
-                    fontWeight: FontWeight.bold),
+                style:
+                    Theme.of(context).textTheme.display1.copyWith(fontSize: 28),
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl),
             SizedBox(
@@ -43,7 +42,7 @@ class _StartPageState extends State<StartPage> {
                   Navigator.pushNamedAndRemoveUntil(
                       context, '/quiz', (s) => s == '/');
                 },
-                color: Colors.blue,
+                color: Theme.of(context).primaryColor,
                 child: Text('مستعد!!',
                     style: TextStyle(color: Colors.white, fontSize: 18),
                     textDirection: TextDirection.rtl),

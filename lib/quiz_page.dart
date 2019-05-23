@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'consts.dart';
 
+import 'consts.dart';
 import 'quizAccount.dart';
 
 class QuizPage extends StatefulWidget {
+  Function notifyMainApp;
+
+  QuizPage({this.notifyMainApp});
+
   @override
   _QuizPageState createState() => _QuizPageState();
 }
@@ -15,7 +19,6 @@ class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
@@ -23,7 +26,6 @@ class _QuizPageState extends State<QuizPage> {
               setState(() {
                 quizbank.restart();
               });
-              //TODO:: HERE WRITE CODE TO ALLOW USER TO RESTART THE QUIZ FROM BEGINNING.
             },
             icon: Icon(
               Icons.refresh,
@@ -39,8 +41,25 @@ class _QuizPageState extends State<QuizPage> {
               color: Colors.white,
             ),
           ),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                currentTheme = currentTheme == ThemeType.Light
+                    ? ThemeType.Dark
+                    : ThemeType.Light;
+                widget.notifyMainApp();
+              });
+            },
+            icon: Icon(
+              Icons.lightbulb_outline,
+              color: Colors.white,
+            ),
+          ),
         ],
-        title: Text('اختبار الغباء'),
+        title: Text(
+          'اختبار الغباء',
+          style: Theme.of(context).textTheme.display2,
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,64 +73,21 @@ class _QuizPageState extends State<QuizPage> {
                 child: Text(
                   quizbank.getQuestionText(),
                   textAlign: TextAlign.center,
-                  style: flatButtonTextStyle,
+                  style: Theme.of(context).textTheme.display1,
                 ),
               ),
             ),
           ),
           Expanded(
+            flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: ListView(
                 children: <Widget>[
-                  FlatButton(
-                    color: Colors.lightBlue,
-                    child: Text(
-                      quizbank.getQuestionAns1(),
-                      style: flatButtonTextStyle,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        quizbank.next();
-                      });
-                    },
-                  ),
-                  FlatButton(
-                    color: Colors.lightBlue,
-                    child: Text(
-                      quizbank.getQuestionAns2(),
-                      style: flatButtonTextStyle,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        quizbank.next();
-                      });
-                    },
-                  ),
-                  FlatButton(
-                    color: Colors.lightBlue,
-                    child: Text(
-                      quizbank.getQuestionAns3(),
-                      style: flatButtonTextStyle,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        quizbank.next();
-                      });
-                    },
-                  ),
-                  FlatButton(
-                    color: Colors.lightBlue,
-                    child: Text(
-                      quizbank.getQuestionAns4(),
-                      style: flatButtonTextStyle,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        quizbank.next();
-                      });
-                    },
-                  )
+                  choiceButton(quizbank.getQuestionAns1()),
+                  choiceButton(quizbank.getQuestionAns2()),
+                  choiceButton(quizbank.getQuestionAns3()),
+                  choiceButton(quizbank.getQuestionAns4()),
                 ],
               ),
             ),
@@ -125,6 +101,25 @@ class _QuizPageState extends State<QuizPage> {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Container choiceButton(String text) {
+    return Container(
+      margin: EdgeInsets.all(8),
+      height: 40,
+      child: FlatButton(
+        color: Theme.of(context).primaryColor,
+        child: Text(
+          text,
+          style: Theme.of(context).textTheme.display2,
+        ),
+        onPressed: () {
+          setState(() {
+            quizbank.next();
+          });
+        },
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import 'consts.dart';
 
 class AboutPage extends StatefulWidget {
@@ -8,9 +9,7 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  //TODO::COMPLETE ALL INFORMATION ABOUT LEMON LAB AND PRIVACY POLICE.
-
-  void _privacyPolicyDialog( String title, String body, String buttonText) {
+  void _privacyPolicyDialog(String title, String body, String buttonText) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -29,6 +28,7 @@ class _AboutPageState extends State<AboutPage> {
       },
     );
   }
+
   _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -36,6 +36,7 @@ class _AboutPageState extends State<AboutPage> {
       throw 'Could not launch $url';
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,25 +47,30 @@ class _AboutPageState extends State<AboutPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FlatButton(
-              color: Colors.lightBlue,
-              child: Text("من نحن", style: flatButtonTextStyle),
-              onPressed: () {setState(() {
-                _privacyPolicyDialog("عن مختبر الليمون", aboutLemonLabAr, "حسنًا");
-              });},
+            Text(
+              aboutLemonLabAr,
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.rtl,
+              style: Theme.of(context).textTheme.display1,
             ),
             FlatButton(
-              color: Colors.lightBlue,
-              child: Text("سياسة الخصوصيّة", style: flatButtonTextStyle),
-              onPressed: () {setState(() {
-                _privacyPolicyDialog("Privacy Policy", privacyPolicyEnglish, "Okay");
-              });},
+              color: Theme.of(context).primaryColor,
+              child: Text("سياسة الخصوصيّة",
+                  style: Theme.of(context).textTheme.display2),
+              onPressed: () {
+                setState(() {
+                  _privacyPolicyDialog(
+                      "Privacy Policy", privacyPolicyEnglish, "Okay");
+                });
+              },
             ),
             FlatButton(
-              color: Colors.lightBlue,
-              child: Text("المزيد من التطبيقات", style: flatButtonTextStyle),
-              onPressed: (){
-                _launchURL('https://play.google.com/store/apps/developer?id=Lemon+Lab');
+              color: Theme.of(context).primaryColor,
+              child: Text("المزيد من التطبيقات",
+                  style: Theme.of(context).textTheme.display2),
+              onPressed: () {
+                _launchURL(
+                    'https://play.google.com/store/apps/developer?id=Lemon+Lab');
               },
             ),
           ],
