@@ -1,3 +1,4 @@
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -18,7 +19,6 @@ class _QuizPageState extends State<QuizPage> {
   List<Widget> scoreKeeper = [];
 
   QuizAccount quizbank = QuizAccount();
-  @override
   void check() {
     if (quizbank.Check()) {
       Alert(
@@ -50,6 +50,14 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   Widget build(BuildContext context) {
+    FirebaseAdMob.instance
+        .initialize(appId: 'ca-app-pub-9769401692194876/4703590906')
+        .then((response) {
+      myBanner
+        ..load()
+        ..show(anchorOffset: 0, anchorType: AnchorType.bottom);
+    });
+
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
@@ -128,9 +136,9 @@ class _QuizPageState extends State<QuizPage> {
             //TODO::Put here an ads from google ads
             width: double.infinity,
             height: 50,
-            color: Colors.blue[100],
+            color: Colors.grey[200],
             child: Center(
-              child: Text('ADS'),
+              child: Text('مساحة إعلانية'),
             ),
           )
         ],
@@ -158,3 +166,27 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 }
+
+//ads
+MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+  keywords: <String>['flutterio', 'beautiful apps'],
+  contentUrl: 'https://flutter.io',
+  birthday: DateTime.now(),
+  childDirected: false,
+  designedForFamilies: false,
+  gender:
+      MobileAdGender.male, // or MobileAdGender.female, MobileAdGender.unknown
+  testDevices: <String>[], // Android emulators are considered test devices
+);
+
+BannerAd myBanner = BannerAd(
+  // Replace the testAdUnitId with an ad unit id from the AdMob dash.
+  // https://developers.google.com/admob/android/test-ads
+  // https://developers.google.com/admob/ios/test-ads
+  adUnitId: BannerAd.testAdUnitId,
+  size: AdSize.smartBanner,
+  targetingInfo: targetingInfo,
+  listener: (MobileAdEvent event) {
+    print("BannerAd event is $event");
+  },
+);
