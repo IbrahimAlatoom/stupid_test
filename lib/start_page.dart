@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'consts.dart';
+
+//TODO : put a night theme on Start page .
+//TODO : creat a page for results and link it with alert button .
 
 class StartPage extends StatefulWidget {
   @override

@@ -3,8 +3,6 @@ import 'dart:math';
 import 'choice.dart';
 import 'questions.dart';
 
-//TODO:: COMPLETE ALL QUESTIONS, DO NOT WORRY ABOUT THE VALUE CHOICE.
-
 class QuizAccount {
   int _QuestionCount = 0;
   List<Questions> _questionBank = [
