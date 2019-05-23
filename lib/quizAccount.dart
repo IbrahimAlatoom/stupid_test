@@ -120,109 +120,103 @@ class QuizAccount {
       choice_4: Choice(data: 'لا تراب.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'عندما تتحدث فإن الآخرين…',
+      choice_1: Choice(data: 'يركضون.', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'ينادوك بالغبي.', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'يهربون.', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'يتحدثون.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText:
+          'قطار كهربائي يسير بسرعة 120 كيلو مترًا في الساعة، وحركة الرياح غربيّة بسرعة 18 كيلو مترًا، برطوبة بنسبة 20% بالمئة. أي يتجه دخان القطار؟',
+      choice_1: Choice(data: 'الشرق', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'ليس إلى أي مكان.', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'الجنوب', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'الغرب', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText:
+          ' مزارع عنده 12 حصانًا، يبيعهم جميعًا إلا 3. كم حصانًا عنده؟',
+      choice_1: Choice(data: '3', value: Random().nextInt(3)),
+      choice_2: Choice(data: '12', value: Random().nextInt(3)),
+      choice_3: Choice(data: '9', value: Random().nextInt(3)),
+      choice_4: Choice(data: '5', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
+      questionText:
+          'وصف لك الطبيب 4 كبسولات دواء، كبسولة كل ساعة. تتناول آخر كبسولة بعد… ساعات',
+      choice_1: Choice(data: '2', value: Random().nextInt(3)),
       choice_2: Choice(data: '4', value: Random().nextInt(3)),
       choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      choice_4: Choice(data: '5', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'ما هي أنتارتيكا؟',
+      choice_1: Choice(data: 'دولة.', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'عاصمة. ', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'قارة.', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'ولاية.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'في أي جهة يدك اليسرى عندما تنظر إلى المرآة؟',
+      choice_1: Choice(data: 'اليسار', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'الشمال', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'اليمين اليسار', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'اليسار', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'كيف تعمل البطاريات؟',
+      choice_1: Choice(data: 'سحر.', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'انعزال حراري.', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'تفاعل كهروكيميائي.', value: Random().nextInt(3)),
+      choice_4:
+          Choice(data: 'تفاعل خافض للكهرباء.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText:
+          'بنى 8 رجال جدارًا في 4 ساعات. في كم ساعة سيبني 4 رجال هذا الجدار؟',
+      choice_1: Choice(data: '6 ساعات.', value: Random().nextInt(3)),
+      choice_2: Choice(data: '8 ساعات.', value: Random().nextInt(3)),
+      choice_3: Choice(data: '2 ساعة.', value: Random().nextInt(3)),
+      choice_4: Choice(data: '0 ساعة.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText:
+          'إذا كان معك عود ثقاب واحد، وجريدة، والقليل من الوقود، وخشبة، أيها تشعل أولًا؟',
+      choice_1: Choice(data: 'الجريدة.', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'عود الثقاب.', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'الخشبة.', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'الوقود.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'إذا رميت حجرًا في البحر الأحمر فإنه…',
+      choice_1: Choice(data: 'يغرق.', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'يطفو.', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'يصبح رطبًا.', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'يصبح لونه أحمرًا.', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'تخيل أنك في قارب يغرق وأن سمك القرش سيهاجمك، كيف تنجو؟',
+      choice_1: Choice(data: 'أفكر بطريقة للنجاة', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'أستخدم طريقة غاوس', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'أتوقف عن الخيال', value: Random().nextInt(3)),
+      choice_4: Choice(
+          data: 'بمسك القرش و بقعد بتفاهم معه', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText: 'كم مرة يمكنك حذف 10 من 100؟',
+      choice_1: Choice(data: 'مرتين', value: Random().nextInt(3)),
+      choice_2: Choice(data: '10 مرات', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'مرة واحدة', value: Random().nextInt(3)),
+      choice_4: Choice(data: '5 مرات', value: Random().nextInt(3)),
     ),
     Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
-    ),
-    Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
-    ),
-    Questions(
-      questionText: '1',
-      choice_1: Choice(data: '5', value: Random().nextInt(3)),
-      choice_2: Choice(data: '4', value: Random().nextInt(3)),
-      choice_3: Choice(data: '3', value: Random().nextInt(3)),
-      choice_4: Choice(data: '1', value: Random().nextInt(3)),
+      questionText:
+          'سنعطيك نتيجة وخيارًا لمشاركتها في نهاية الاختبار، هل ستشارك النتيجة لو كنت غبيًا؟',
+      choice_1: Choice(data: 'نعم.', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'لا.', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'ممكن.', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'اكيد!', value: Random().nextInt(3)),
     ),
   ];
 
@@ -232,8 +226,16 @@ class QuizAccount {
     }
   }
 
+  bool Check() {
+    if (_QuestionCount == _questionBank.length - 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   void restart() {
-      _QuestionCount=0;
+    _QuestionCount = 0;
   }
 
   String getQuestionText() {

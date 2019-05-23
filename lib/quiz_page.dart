@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'consts.dart';
 import 'quizAccount.dart';
 
@@ -17,6 +17,27 @@ class _QuizPageState extends State<QuizPage> {
 
   QuizAccount quizbank = QuizAccount();
   @override
+  void check() {
+    if (quizbank.Check()) {
+      Alert(
+        context: context,
+        title: '!مبروك',
+        type: AlertType.success,
+        desc: 'لقد أنهيت التحدي',
+        buttons: [
+          DialogButton(
+            child: Text(
+              "النتيجة",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+            onPressed: () => Navigator.pop(context),
+            width: 120,
+          )
+        ],
+      ).show();
+    }
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -117,6 +138,7 @@ class _QuizPageState extends State<QuizPage> {
         ),
         onPressed: () {
           setState(() {
+            check();
             quizbank.next();
           });
         },

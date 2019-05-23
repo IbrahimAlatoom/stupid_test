@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'consts.dart';
 
 class StartPage extends StatefulWidget {
   @override
