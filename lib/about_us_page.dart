@@ -6,6 +6,8 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
+  //TODO::COMPLETE ALL INFORMATION ABOUT LEMON LAB AND PRIVACY POLICE.
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

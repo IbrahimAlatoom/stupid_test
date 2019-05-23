@@ -10,8 +10,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.all_inclusive),
-        title: Text('QUize\'s App'),
+        title: Text('مرحبًا بك'),
       ),
       backgroundColor: Colors.grey.shade900,
       body: Center(
@@ -37,17 +36,18 @@ class _StartPageState extends State<StartPage> {
             SizedBox(
               height: 50,
             ),
-            FlatButton(
-              onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, '/quiz', (s) => s == '/');
-              },
-              color: Colors.black12,
-              child: Text('مستعد!!',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  textDirection: TextDirection.rtl),
+            Container(
+              width: 120,
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/quiz', (s) => s == '/');
+                },
+                color: Colors.blue,
+                child: Text('مستعد!!',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    textDirection: TextDirection.rtl),
+              ),
             )
           ],
         ),

@@ -9,9 +9,13 @@ void main() => runApp(Quizzer());
 class Quizzer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: {
-      '/quiz': (context) => QuizPage(),
-      '/about': (context) => AboutPage()
-    }, theme: ThemeData(fontFamily: 'Lalezar'), home: StartPage());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/quiz': (context) => QuizPage(),
+          '/about': (context) => AboutPage()
+        },
+        theme: ThemeData(fontFamily: 'Lalezar'),
+        home: StartPage());
   }
 }

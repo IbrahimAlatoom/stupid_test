@@ -19,13 +19,22 @@ class _QuizPageState extends State<QuizPage> {
         actions: <Widget>[
           IconButton(
             onPressed: () {
+              //TODO:: HERE WRITE CODE TO ALLOW USER TO RESTART THE QUIZ FROM BEGINNING.
+            },
+            icon: Icon(
+              Icons.refresh,
+              color: Colors.white,
+            ),
+          ),
+          IconButton(
+            onPressed: () {
               Navigator.pushNamed(context, '/about');
             },
             icon: Icon(
               Icons.info,
               color: Colors.white,
             ),
-          )
+          ),
         ],
         title: Text('اختبار الغباء'),
       ),
@@ -50,69 +59,72 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Expanded(
-            child: ListView(
-              children: <Widget>[
-                FlatButton(
-                  color: Colors.red,
-                  child: Text(
-                    quizbank.getQuestionAns1(),
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: ListView(
+                children: <Widget>[
+                  FlatButton(
+                    color: Colors.lightBlue,
+                    child: Text(
+                      quizbank.getQuestionAns1(),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
+                    onPressed: () {
+                      setState(() {
+                        quizbank.next();
+                      });
+                    },
                   ),
-                  onPressed: () {
-                    setState(() {
-                      quizbank.next();
-                    });
-                  },
-                ),
-                FlatButton(
-                  color: Colors.red,
-                  child: Text(
-                    quizbank.getQuestionAns2(),
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+                  FlatButton(
+                    color: Colors.lightBlue,
+                    child: Text(
+                      quizbank.getQuestionAns2(),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
+                    onPressed: () {
+                      setState(() {
+                        quizbank.next();
+                      });
+                    },
                   ),
-                  onPressed: () {
-                    setState(() {
-                      quizbank.next();
-                    });
-                  },
-                ),
-                FlatButton(
-                  color: Colors.red,
-                  child: Text(
-                    quizbank.getQuestionAns3(),
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+                  FlatButton(
+                    color: Colors.lightBlue,
+                    child: Text(
+                      quizbank.getQuestionAns3(),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
+                    onPressed: () {
+                      setState(() {
+                        quizbank.next();
+                      });
+                    },
                   ),
-                  onPressed: () {
-                    setState(() {
-                      quizbank.next();
-                    });
-                  },
-                ),
-                FlatButton(
-                  color: Colors.red,
-                  child: Text(
-                    quizbank.getQuestionAns4(),
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+                  FlatButton(
+                    color: Colors.lightBlue,
+                    child: Text(
+                      quizbank.getQuestionAns4(),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      quizbank.next();
-                    });
-                  },
-                )
-              ],
+                    onPressed: () {
+                      setState(() {
+                        quizbank.next();
+                      });
+                    },
+                  )
+                ],
+              ),
             ),
           ),
           Container(
