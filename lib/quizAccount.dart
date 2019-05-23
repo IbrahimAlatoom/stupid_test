@@ -96,7 +96,7 @@ class QuizAccount {
       choice_1: Choice(data: '7', value: Random().nextInt(3)),
       choice_2: Choice(data: '9', value: Random().nextInt(3)),
       choice_3: Choice(data: '10', value: Random().nextInt(3)),
-      choice_4: Choice(data: '6', value: Random().nextInt(3)),
+      choice_4: Choice(data: '8', value: Random().nextInt(3)),
     ),
     Questions(
       questionText: 'طائرة تمر من فوق مثلث برمودا، أين يدفن من ظل حيًا؟',
@@ -230,6 +230,10 @@ class QuizAccount {
     if (_QuestionCount < (_questionBank.length - 1)) {
       _QuestionCount++;
     }
+  }
+
+  void restart() {
+      _QuestionCount=0;
   }
 
   String getQuestionText() {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'consts.dart';
 
 import 'quizAccount.dart';
 
@@ -19,6 +20,9 @@ class _QuizPageState extends State<QuizPage> {
         actions: <Widget>[
           IconButton(
             onPressed: () {
+              setState(() {
+                quizbank.restart();
+              });
               //TODO:: HERE WRITE CODE TO ALLOW USER TO RESTART THE QUIZ FROM BEGINNING.
             },
             icon: Icon(
@@ -50,10 +54,7 @@ class _QuizPageState extends State<QuizPage> {
                 child: Text(
                   quizbank.getQuestionText(),
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    color: Colors.white,
-                  ),
+                  style: flatButtonTextStyle,
                 ),
               ),
             ),
@@ -67,10 +68,7 @@ class _QuizPageState extends State<QuizPage> {
                     color: Colors.lightBlue,
                     child: Text(
                       quizbank.getQuestionAns1(),
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                      style: flatButtonTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
@@ -82,10 +80,7 @@ class _QuizPageState extends State<QuizPage> {
                     color: Colors.lightBlue,
                     child: Text(
                       quizbank.getQuestionAns2(),
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                      style: flatButtonTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
@@ -97,10 +92,7 @@ class _QuizPageState extends State<QuizPage> {
                     color: Colors.lightBlue,
                     child: Text(
                       quizbank.getQuestionAns3(),
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                      style: flatButtonTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
@@ -112,10 +104,7 @@ class _QuizPageState extends State<QuizPage> {
                     color: Colors.lightBlue,
                     child: Text(
                       quizbank.getQuestionAns4(),
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                      style: flatButtonTextStyle,
                     ),
                     onPressed: () {
                       setState(() {
