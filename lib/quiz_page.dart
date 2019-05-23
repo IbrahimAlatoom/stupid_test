@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+
 import 'consts.dart';
 import 'quizAccount.dart';
+import 'result_page.dart';
 
 class QuizPage extends StatefulWidget {
   Function notifyMainApp;
@@ -30,7 +32,16 @@ class _QuizPageState extends State<QuizPage> {
               "النتيجة",
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              Navigator.of(context).pop(); //to close the current alert
+              // open the final result
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return ResultPage(
+                  //TODO: Type here the final result for user
+                  message: 'ضع هنا الرسالة النهائية',
+                );
+              }));
+            },
             width: 120,
           )
         ],
@@ -58,7 +69,7 @@ class _QuizPageState extends State<QuizPage> {
               Navigator.pushNamed(context, '/about');
             },
             icon: Icon(
-              Icons.info,
+              Icons.info_outline,
               color: Colors.white,
             ),
           ),
@@ -114,6 +125,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Container(
+            //TODO::Put here an ads from google ads
             width: double.infinity,
             height: 50,
             color: Colors.blue[100],

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-//TODO : put a night theme on Start page .
-//TODO : creat a page for results and link it with alert button .
+import 'consts.dart';
+//TODO : create a page for results and link it with alert button .
 
 class StartPage extends StatefulWidget {
+  final Function notifyParent;
+  StartPage({this.notifyParent});
+
   @override
   _StartPageState createState() => _StartPageState();
 }
@@ -18,6 +21,22 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('مرحبًا بك'),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              setState(() {
+                currentTheme = currentTheme == ThemeType.Light
+                    ? ThemeType.Dark
+                    : ThemeType.Light;
+                widget.notifyParent();
+              });
+            },
+            icon: Icon(
+              Icons.lightbulb_outline,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: Column(

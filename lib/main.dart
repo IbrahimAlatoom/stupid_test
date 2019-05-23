@@ -26,9 +26,11 @@ class _MyAppState extends State<MyApp> {
           '/quiz': (context) => QuizPage(
                 notifyMainApp: this.refresh,
               ),
-          '/about': (context) => AboutPage()
+          '/about': (context) => AboutPage(),
         },
         theme: currentTheme == ThemeType.Light ? lightTheme : darkTheme,
-        home: StartPage());
+        home: StartPage(
+          notifyParent: this.refresh,
+        ));
   }
 }
