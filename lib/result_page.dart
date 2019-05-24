@@ -1,24 +1,57 @@
 import 'package:flutter/material.dart';
+import 'consts.dart';
+import 'dart:math';
+import 'package:share/share.dart';
 
 class ResultPage extends StatefulWidget {
-  final String message;
-  ResultPage({this.message});
-
   @override
   _ResultPageState createState() => _ResultPageState();
 }
 
 class _ResultPageState extends State<ResultPage> {
+  String result = listOfResults[Random().nextInt(13)];
+  int stupidity = (Random().nextInt(80) + 50);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('النتيجة'),
+        title: Text('نتيجتك'),
       ),
       body: Center(
-        child:
-            Text(widget.message, style: Theme.of(context).textTheme.display1),
-      ),
+          child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(result,
+                style: Theme.of(context).textTheme.display1,
+                textDirection: TextDirection.rtl),
+            Text("نسبة غبائك هي $stupidity%",
+                style: Theme.of(context).textTheme.display1,
+                textDirection: TextDirection.rtl),
+            FlatButton(
+              color: Theme.of(context).primaryColor,
+              child: Text("مشاركة النتيجة",
+                  style: flatButtonTextStyle, textDirection: TextDirection.rtl),
+              onPressed: () {
+                setState(() {
+                  Share.share(result);
+                });
+              },
+            ),
+            FlatButton(
+              color: Theme.of(context).accentColor,
+              child: Text("مشاركة التطبيق",
+                  style: flatButtonTextStyle, textDirection: TextDirection.rtl),
+              onPressed: () {
+                setState(() {
+                  Share.share("قم بتجربة اختبار الغباء لتعرف إذا كنت غبيًا أو لا!$lemonLabDev ");
+                });
+              },
+            ),
+          ],
+        ),
+      )),
     );
   }
 }

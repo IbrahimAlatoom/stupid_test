@@ -20,7 +20,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('مرحبًا بك'),
+        title: Text('اختبار الغباء'),
         actions: <Widget>[
           IconButton(
             onPressed: () {
@@ -49,7 +49,7 @@ class _StartPageState extends State<StartPage> {
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
             ),
-            Text('هل انت مستعد لمعرفة كم انت غبي؟',
+            Text('قد يقال عنك غبي خلال الاختبار وبعده، تقدم فقط إذا توافق على ذلك.\n الآن، هل مستعد لمعرفة كم أنت غبي؟',
                 style:
                     Theme.of(context).textTheme.display1.copyWith(fontSize: 28),
                 textAlign: TextAlign.center,

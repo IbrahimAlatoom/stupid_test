@@ -1,13 +1,11 @@
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 
 import 'consts.dart';
 import 'quizAccount.dart';
-import 'result_page.dart';
 
 class QuizPage extends StatefulWidget {
-  Function notifyMainApp;
+  final Function notifyMainApp;
 
   QuizPage({this.notifyMainApp});
 
@@ -19,36 +17,6 @@ class _QuizPageState extends State<QuizPage> {
   List<Widget> scoreKeeper = [];
 
   QuizAccount quizbank = QuizAccount();
-  void check() {
-    if (quizbank.Check()) {
-      Alert(
-        context: context,
-        title: '!مبروك',
-        type: AlertType.success,
-        desc: 'لقد أنهيت التحدي',
-        buttons: [
-          DialogButton(
-            child: Text(
-              "النتيجة",
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            onPressed: () {
-              Navigator.of(context).pop(); //to close the current alert
-
-              //Open the final result and close this page
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return ResultPage(
-                  message: 'ضع هنا النتيجة',
-                );
-              }));
-            },
-            width: 120,
-          )
-        ],
-      ).show();
-    }
-  }
 
   @override
   void initState() {
@@ -164,11 +132,12 @@ class _QuizPageState extends State<QuizPage> {
         child: Text(
           text,
           style: Theme.of(context).textTheme.display2,
+          textDirection: TextDirection.rtl,
         ),
         onPressed: () {
           setState(() {
-            check();
-            quizbank.next();
+            print(quizbank.questionCount);
+            quizbank.next(context);
           });
         },
       ),

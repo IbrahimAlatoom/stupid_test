@@ -1,10 +1,10 @@
 import 'dart:math';
-
+import 'package:flutter/material.dart';
 import 'choice.dart';
 import 'questions.dart';
 
 class QuizAccount {
-  int _QuestionCount = 0;
+  int questionCount = 0;
   List<Questions> _questionBank = [
     Questions(
       questionText: 'لماذا نزلت التطبيق؟',
@@ -24,15 +24,15 @@ class QuizAccount {
     Questions(
       questionText: ' أي التالية موجود في الحقيقة؟',
       choice_1:
-          Choice(data: 'زجاج مصنوع من البلاستيك', value: Random().nextInt(3)),
+      Choice(data: 'زجاج مصنوع من البلاستيك', value: Random().nextInt(3)),
       choice_2:
-          Choice(data: 'بطارية مصنوعة من الخشب', value: Random().nextInt(3)),
+      Choice(data: 'بطارية مصنوعة من الخشب', value: Random().nextInt(3)),
       choice_3: Choice(data: 'نجمة من نار', value: Random().nextInt(3)),
       choice_4: Choice(data: 'لا شيء مما سبق.', value: Random().nextInt(3)),
     ),
     Questions(
       questionText:
-          ' والد تيسير عنده 5 أطفال. عقلة، خلف، عوض، عصام، الخامس هو؟',
+      ' والد تيسير عنده 5 أطفال. عقلة، خلف، عوض، عصام، الخامس هو؟',
       choice_1: Choice(data: 'خليفة', value: Random().nextInt(3)),
       choice_2: Choice(data: 'عاقل', value: Random().nextInt(3)),
       choice_3: Choice(data: 'معتز', value: Random().nextInt(3)),
@@ -72,12 +72,12 @@ class QuizAccount {
       choice_2: Choice(data: 'لا', value: Random().nextInt(3)),
       choice_3: Choice(data: 'لا أعرف', value: Random().nextInt(3)),
       choice_4:
-          Choice(data: 'لعاد انا منزل تطبيقك لويش', value: Random().nextInt(3)),
+      Choice(data: 'لعاد انا منزل تطبيقك لويش', value: Random().nextInt(3)),
     ),
     Questions(
       questionText: 'هل تشعر بأنك ذكي؟',
       choice_1:
-          Choice(data: 'نعم، لذلك قررت التأكد.', value: Random().nextInt(3)),
+      Choice(data: 'نعم، لذلك قررت التأكد.', value: Random().nextInt(3)),
       choice_2: Choice(data: 'لا.', value: Random().nextInt(3)),
       choice_3: Choice(data: 'أحيانًا.', value: Random().nextInt(3)),
       choice_4: Choice(data: 'انداري', value: Random().nextInt(3)),
@@ -126,7 +126,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-          'قطار كهربائي يسير بسرعة 120 كيلو مترًا في الساعة، وحركة الرياح غربيّة بسرعة 18 كيلو مترًا، برطوبة بنسبة 20% بالمئة. أي يتجه دخان القطار؟',
+      'قطار كهربائي يسير بسرعة 120 كيلو مترًا في الساعة، وحركة الرياح غربيّة بسرعة 18 كيلو مترًا، برطوبة بنسبة 20% بالمئة. أي يتجه دخان القطار؟',
       choice_1: Choice(data: 'الشرق', value: Random().nextInt(3)),
       choice_2: Choice(data: 'ليس إلى أي مكان.', value: Random().nextInt(3)),
       choice_3: Choice(data: 'الجنوب', value: Random().nextInt(3)),
@@ -134,7 +134,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-          ' مزارع عنده 12 حصانًا، يبيعهم جميعًا إلا 3. كم حصانًا عنده؟',
+      ' مزارع عنده 12 حصانًا، يبيعهم جميعًا إلا 3. كم حصانًا عنده؟',
       choice_1: Choice(data: '3', value: Random().nextInt(3)),
       choice_2: Choice(data: '12', value: Random().nextInt(3)),
       choice_3: Choice(data: '9', value: Random().nextInt(3)),
@@ -142,7 +142,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-          'وصف لك الطبيب 4 كبسولات دواء، كبسولة كل ساعة. تتناول آخر كبسولة بعد… ساعات',
+      'وصف لك الطبيب 4 كبسولات دواء، كبسولة كل ساعة. تتناول آخر كبسولة بعد… ساعات',
       choice_1: Choice(data: '2', value: Random().nextInt(3)),
       choice_2: Choice(data: '4', value: Random().nextInt(3)),
       choice_3: Choice(data: '3', value: Random().nextInt(3)),
@@ -168,11 +168,11 @@ class QuizAccount {
       choice_2: Choice(data: 'انعزال حراري.', value: Random().nextInt(3)),
       choice_3: Choice(data: 'تفاعل كهروكيميائي.', value: Random().nextInt(3)),
       choice_4:
-          Choice(data: 'تفاعل خافض للكهرباء.', value: Random().nextInt(3)),
+      Choice(data: 'تفاعل خافض للكهرباء.', value: Random().nextInt(3)),
     ),
     Questions(
       questionText:
-          'بنى 8 رجال جدارًا في 4 ساعات. في كم ساعة سيبني 4 رجال هذا الجدار؟',
+      'بنى 8 رجال جدارًا في 4 ساعات. في كم ساعة سيبني 4 رجال هذا الجدار؟',
       choice_1: Choice(data: '6 ساعات.', value: Random().nextInt(3)),
       choice_2: Choice(data: '8 ساعات.', value: Random().nextInt(3)),
       choice_3: Choice(data: '2 ساعة.', value: Random().nextInt(3)),
@@ -180,7 +180,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-          'إذا كان معك عود ثقاب واحد، وجريدة، والقليل من الوقود، وخشبة، أيها تشعل أولًا؟',
+      'إذا كان معك عود ثقاب واحد، وجريدة، والقليل من الوقود، وخشبة، أيها تشعل أولًا؟',
       choice_1: Choice(data: 'الجريدة.', value: Random().nextInt(3)),
       choice_2: Choice(data: 'عود الثقاب.', value: Random().nextInt(3)),
       choice_3: Choice(data: 'الخشبة.', value: Random().nextInt(3)),
@@ -210,7 +210,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-          'سنعطيك نتيجة وخيارًا لمشاركتها في نهاية الاختبار، هل ستشارك النتيجة لو كنت غبيًا؟',
+      'سنعطيك نتيجة وخيارًا لمشاركتها في نهاية الاختبار، هل ستشارك النتيجة لو كنت غبيًا؟',
       choice_1: Choice(data: 'نعم.', value: Random().nextInt(3)),
       choice_2: Choice(data: 'لا.', value: Random().nextInt(3)),
       choice_3: Choice(data: 'ممكن.', value: Random().nextInt(3)),
@@ -218,41 +218,36 @@ class QuizAccount {
     ),
   ];
 
-  void next() {
-    if (_QuestionCount < (_questionBank.length - 1)) {
-      _QuestionCount++;
-    }
-  }
-
-  bool Check() {
-    if (_QuestionCount == _questionBank.length - 1) {
-      return true;
+  void next(BuildContext context) {
+    if (questionCount < (_questionBank.length - 1)) {
+      questionCount++;
     } else {
-      return false;
+      Navigator.pushNamed(context, '/result');
+      questionCount = 0;
     }
   }
 
   void restart() {
-    _QuestionCount = 0;
+    questionCount = 0;
   }
 
   String getQuestionText() {
-    return _questionBank[_QuestionCount].questionText;
+    return _questionBank[questionCount].questionText;
   }
 
   String getQuestionAns1() {
-    return _questionBank[_QuestionCount].choice_1.data;
+    return _questionBank[questionCount].choice_1.data;
   }
 
   String getQuestionAns2() {
-    return _questionBank[_QuestionCount].choice_2.data;
+    return _questionBank[questionCount].choice_2.data;
   }
 
   String getQuestionAns3() {
-    return _questionBank[_QuestionCount].choice_3.data;
+    return _questionBank[questionCount].choice_3.data;
   }
 
   String getQuestionAns4() {
-    return _questionBank[_QuestionCount].choice_4.data;
+    return _questionBank[questionCount].choice_4.data;
   }
 }
