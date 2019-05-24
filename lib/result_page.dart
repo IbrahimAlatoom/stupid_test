@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
-import 'consts.dart';
 import 'dart:math';
+
+import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+
+import 'consts.dart';
 
 class ResultPage extends StatefulWidget {
   @override
@@ -23,12 +25,18 @@ class _ResultPageState extends State<ResultPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(result,
-                style: Theme.of(context).textTheme.display1,
-                textDirection: TextDirection.rtl),
+            Text(
+              result,
+              style: Theme.of(context).textTheme.display1,
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+            ),
             Text("نسبة غبائك هي $stupidity%",
                 style: Theme.of(context).textTheme.display1,
                 textDirection: TextDirection.rtl),
+            SizedBox(
+              height: 40,
+            ),
             FlatButton(
               color: Theme.of(context).primaryColor,
               child: Text("مشاركة النتيجة",
@@ -40,12 +48,13 @@ class _ResultPageState extends State<ResultPage> {
               },
             ),
             FlatButton(
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).primaryColor,
               child: Text("مشاركة التطبيق",
                   style: flatButtonTextStyle, textDirection: TextDirection.rtl),
               onPressed: () {
                 setState(() {
-                  Share.share("قم بتجربة اختبار الغباء لتعرف إذا كنت غبيًا أو لا!$lemonLabDev ");
+                  Share.share(
+                      "قم بتجربة اختبار الغباء لتعرف إذا كنت غبيًا أو لا!$lemonLabDev ");
                 });
               },
             ),
