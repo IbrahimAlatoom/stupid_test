@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "795103351406",
+    "firebase_url": "https://stupid-test-5ce6e.firebaseio.com",
+    "project_id": "stupid-test-5ce6e",
+    "storage_bucket": "stupid-test-5ce6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795103351406:android:d12e153f9a59da2c",
+        "android_client_info": {
+          "package_name": "com.lemonlab.stupid_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795103351406-qo1crbbfr2ieljiahtuh6736efb1ao0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDdhyySqNLTbJCdcAqBgaaw2b9hEgGdo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795103351406-qo1crbbfr2ieljiahtuh6736efb1ao0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

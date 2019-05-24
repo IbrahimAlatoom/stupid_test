@@ -34,11 +34,12 @@ class _QuizPageState extends State<QuizPage> {
             ),
             onPressed: () {
               Navigator.of(context).pop(); //to close the current alert
-              // open the final result
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
+
+              //Open the final result and close this page
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) {
                 return ResultPage(
-                  //TODO: Type here the final result for user
-                  message: 'ضع هنا الرسالة النهائية',
+                  message: 'ضع هنا النتيجة',
                 );
               }));
             },
@@ -49,15 +50,24 @@ class _QuizPageState extends State<QuizPage> {
     }
   }
 
-  Widget build(BuildContext context) {
-    FirebaseAdMob.instance
-        .initialize(appId: 'ca-app-pub-9769401692194876/4703590906')
-        .then((response) {
-      myBanner
-        ..load()
-        ..show(anchorOffset: 0, anchorType: AnchorType.bottom);
-    });
+  @override
+  void initState() {
+    try {
+      FirebaseAdMob.instance
+          .initialize(appId: 'ca-app-pub-9769401692194876~7521325935')
+          .then((response) {
+        myBanner
+          ..load()
+          ..show(anchorOffset: 0, anchorType: AnchorType.bottom);
+      });
+    } catch (e) {
+      print(e);
+    }
 
+    super.initState();
+  }
+
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
@@ -133,7 +143,6 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Container(
-            //TODO::Put here an ads from google ads
             width: double.infinity,
             height: 50,
             color: Colors.grey[200],
@@ -171,19 +180,12 @@ class _QuizPageState extends State<QuizPage> {
 MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
   keywords: <String>['flutterio', 'beautiful apps'],
   contentUrl: 'https://flutter.io',
-  birthday: DateTime.now(),
   childDirected: false,
-  designedForFamilies: false,
-  gender:
-      MobileAdGender.male, // or MobileAdGender.female, MobileAdGender.unknown
-  testDevices: <String>[], // Android emulators are considered test devices
+  testDevices: <String>[],
 );
 
 BannerAd myBanner = BannerAd(
-  // Replace the testAdUnitId with an ad unit id from the AdMob dash.
-  // https://developers.google.com/admob/android/test-ads
-  // https://developers.google.com/admob/ios/test-ads
-  adUnitId: BannerAd.testAdUnitId,
+  adUnitId: 'ca-app-pub-9769401692194876/4703590906',
   size: AdSize.smartBanner,
   targetingInfo: targetingInfo,
   listener: (MobileAdEvent event) {

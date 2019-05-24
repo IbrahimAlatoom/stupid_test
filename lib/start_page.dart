@@ -61,8 +61,7 @@ class _StartPageState extends State<StartPage> {
               width: 120,
               child: FlatButton(
                 onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/quiz', (s) => s == '/');
+                  Navigator.pushNamed(context, '/quiz');
                 },
                 color: Theme.of(context).primaryColor,
                 child: Text('مستعد!!',

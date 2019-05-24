@@ -5,6 +5,7 @@ import 'package:quizzler/themes.dart';
 
 import 'about_us_page.dart';
 import 'consts.dart';
+import 'result_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,16 +22,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: {
-          '/quiz': (context) => QuizPage(
-                notifyMainApp: this.refresh,
-              ),
-          '/about': (context) => AboutPage(),
-        },
-        theme: currentTheme == ThemeType.Light ? lightTheme : darkTheme,
-        home: StartPage(
-          notifyParent: this.refresh,
-        ));
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => StartPage(
+              notifyParent: this.refresh,
+            ),
+        '/quiz': (context) => QuizPage(
+              notifyMainApp: this.refresh,
+            ),
+        '/about': (context) => AboutPage(),
+        '/result': (context) => ResultPage()
+      },
+      theme: currentTheme == ThemeType.Light ? lightTheme : darkTheme,
+    );
   }
 }
