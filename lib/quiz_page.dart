@@ -88,10 +88,15 @@ class _QuizPageState extends State<QuizPage> {
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Text(
-                  quizbank.getQuestionText(),
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.display1,
+                child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  children: <Widget>[
+                    Text(
+                      quizbank.getQuestionText(),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.display1,
+                    ),
+                  ],
                 ),
               ),
             ),
