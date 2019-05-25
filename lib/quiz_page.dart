@@ -136,7 +136,6 @@ class _QuizPageState extends State<QuizPage> {
         ),
         onPressed: () {
           setState(() {
-            print(quizbank.questionCount);
             quizbank.next(context);
           });
         },

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 enum ThemeType { Light, Dark }
 
 ThemeType currentTheme = ThemeType.Light;
+
 const String lemonLabDev = 'https://play.google.com/store/apps/developer?id=Lemon+Lab';
+
 const List<String> listOfResults = ["فقط شيئان لا حدود لهما. الكون، وغباء البشر، ولستُ متأكدًا من الأول.\n البرت انشتاين.",
   "أكثر عنصرين شائعين في الكون هما الهيدروجين، والغباء. \n هارلان إليسون.", "الجمال يختفي مع الزمن، الغباء يبقى للأبد!",
   "إذا بدلنا عقلك بما يساويه في الحجم من الداينامايت، أعتقد لن تشعر بشيء إذا تفجر.", "هناك أشكال كثيرة للغباء، لكن النوع الذي تمتلكه هو الأفضل!",

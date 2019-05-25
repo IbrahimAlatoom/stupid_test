@@ -98,7 +98,7 @@ class QuizAccount {
     ),
     Questions(
       questionText: 'طائرة تمر من فوق مثلث برمودا، أين يدفن من ظل حيًا؟',
-      choice_1: Choice(data: 'بضلوا بالطيارة', value: Random().nextInt(3)),
+      choice_1: Choice(data: 'بظلوا بالطيارة', value: Random().nextInt(3)),
       choice_2: Choice(data: 'إسبانيا', value: Random().nextInt(3)),
       choice_3: Choice(data: 'كارولينا الشمالية', value: Random().nextInt(3)),
       choice_4: Choice(data: 'فلوريدا', value: Random().nextInt(3)),
@@ -126,7 +126,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-      'قطار كهربائي يسير بسرعة 120 كيلو مترًا في الساعة، وحركة الرياح غربيّة بسرعة 18 كيلو مترًا، برطوبة بنسبة 20% بالمئة. أي يتجه دخان القطار؟',
+      'قطار كهربائي يسير بسرعة 120 كيلو مترًا في الساعة، وحركة الرياح غربيّة بسرعة 18 كيلو مترًا، برطوبة بنسبة 20% بالمئة. أين يتجه دخان القطار؟',
       choice_1: Choice(data: 'الشرق', value: Random().nextInt(3)),
       choice_2: Choice(data: 'ليس إلى أي مكان.', value: Random().nextInt(3)),
       choice_3: Choice(data: 'الجنوب', value: Random().nextInt(3)),
@@ -142,7 +142,7 @@ class QuizAccount {
     ),
     Questions(
       questionText:
-      'وصف لك الطبيب 4 كبسولات دواء، كبسولة كل ساعة. تتناول آخر كبسولة بعد… ساعات',
+      'وصف لك الطبيب 4 كبسولات دواء، كبسولة كل ساعة. تتناول آخر كبسولة بعد... ساعات',
       choice_1: Choice(data: '2', value: Random().nextInt(3)),
       choice_2: Choice(data: '4', value: Random().nextInt(3)),
       choice_3: Choice(data: '3', value: Random().nextInt(3)),
@@ -196,7 +196,7 @@ class QuizAccount {
     Questions(
       questionText: 'تخيل أنك في قارب يغرق وأن سمك القرش سيهاجمك، كيف تنجو؟',
       choice_1: Choice(data: 'أفكر بطريقة للنجاة', value: Random().nextInt(3)),
-      choice_2: Choice(data: 'أستخدم طريقة غاوس', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'تسبح لأقرب شاطئ', value: Random().nextInt(3)),
       choice_3: Choice(data: 'أتوقف عن الخيال', value: Random().nextInt(3)),
       choice_4: Choice(
           data: 'بمسك القرش و بقعد بتفاهم معه', value: Random().nextInt(3)),
@@ -207,6 +207,62 @@ class QuizAccount {
       choice_2: Choice(data: '10 مرات', value: Random().nextInt(3)),
       choice_3: Choice(data: 'مرة واحدة', value: Random().nextInt(3)),
       choice_4: Choice(data: '5 مرات', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'أي التالية موجود في الجدول الدوري؟',
+      choice_1: Choice(data: 'الفريميوم', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'البروميوم', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'الحمض النووي', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'الغالديوم', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'إذا رأيت الرمز ∫، فإنك',
+      choice_1: Choice(data: 'تهرب. لم تره منذ الثانوية', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'تبًا إذا كان لدي أدنى فكرة ماهو', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'تخرج الـfx-9860G الخاصة بك!', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'تجلب ورقة وقلم، لانك تعلم ماذا ستفعل', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'ما هو الMn?',
+      choice_1: Choice(data: 'ثابت انشتاين', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'ثابت ردبيرغ', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'مغنيزيوم', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'منغنيز', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'كيف عرفت؟',
+      choice_1: Choice(data: 'طريقة غاوس', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'الانترنت', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'كنت أعرف', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'اخترت عشوائيًا', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'كم ساعة لك على هاتفك قبل أخذك للاختبار؟',
+      choice_1: Choice(data: 'أقل من ساعة', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'أكثر من ساعتين', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'قليلًا', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'أقل من نصف يوم', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'أي التالية يعتبر أثقل عنصر يمكن للنجم انتاجه؟',
+      choice_1: Choice(data: 'ناسي/ة Ns', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'اللهب Lh', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'الحديد Fe', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'الهليوم He', value: Random().nextInt(3)),
+    ),
+    Questions(
+      questionText:
+      'هل سبق لك أن حولت بين كلفن ورانكن؟',
+      choice_1: Choice(data: 'لا', value: Random().nextInt(3)),
+      choice_2: Choice(data: 'رانكن؟', value: Random().nextInt(3)),
+      choice_3: Choice(data: 'لأبحاثي العلميّة، نعم.', value: Random().nextInt(3)),
+      choice_4: Choice(data: 'السؤال التالي', value: Random().nextInt(3)),
     ),
     Questions(
       questionText:

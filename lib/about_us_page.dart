@@ -70,7 +70,7 @@ class _AboutPageState extends State<AboutPage> {
                   style: Theme.of(context).textTheme.display2),
               onPressed: () {
                 _launchURL(
-                    'lemonLabDev');
+                    lemonLabDev);
               },
             ),
           ],
