@@ -12,7 +12,7 @@ class ResultPage extends StatefulWidget {
 
 class _ResultPageState extends State<ResultPage> {
   String result = listOfResults[Random().nextInt(13)];
-  int stupidity = (Random().nextInt(80) + 50);
+  int stupidity = (Random().nextInt(50) + 40);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

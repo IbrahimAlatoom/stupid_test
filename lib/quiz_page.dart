@@ -142,6 +142,16 @@ class _QuizPageState extends State<QuizPage> {
         onPressed: () {
           setState(() {
             quizbank.next(context);
+
+            // Try show ad
+            if(quizbank.questionCount % 9 == 0){
+              myInterstitial
+                ..load()
+                ..show(
+                  anchorType: AnchorType.bottom,
+                  anchorOffset: 0.0,
+                );
+            }
           });
         },
       ),
@@ -163,5 +173,12 @@ BannerAd myBanner = BannerAd(
   targetingInfo: targetingInfo,
   listener: (MobileAdEvent event) {
     print("BannerAd event is $event");
+  },
+);
+
+InterstitialAd myInterstitial = InterstitialAd(
+  adUnitId:'ca-app-pub-9769401692194876/8699301575',
+  listener: (MobileAdEvent event) {
+    print("InterstitialAd event is $event");
   },
 );
